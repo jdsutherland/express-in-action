@@ -4,7 +4,10 @@
   "description": "API to generate random number given min and max inputs",
   "main": "app.js",
   "repository": {},
-  "license": "MIT",
+  ".license": "MIT",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
   "dependencies": {
     "express": "^4.14.1"
   }
