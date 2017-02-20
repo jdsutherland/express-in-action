@@ -1,0 +1,11 @@
+{
+  "name": "random-number-api",
+  "version": "1.0.0",
+  "description": "API to generate random number given min and max inputs",
+  "main": "app.js",
+  "repository": {},
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
