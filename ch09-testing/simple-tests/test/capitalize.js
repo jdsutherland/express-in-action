@@ -1,8 +1,5 @@
-const chai = require('chai');
-
+const expect = require('chai').expect;
 const capitalize = require('../capitalize');
-
-const expect = chai.expect;
 
 describe('capitalize', function() {
   it('capitalizes single words', function() {

@@ -1,10 +1,10 @@
-var app = require("../app");
+const app = require("../app");
 
-var supertest = require("supertest");
+const supertest = require("supertest");
 
 describe("plain text response", () => {
 
-  var request;
+  let request;
   beforeEach(() => {
     request = supertest(app)
       .get("/")
