@@ -55,4 +55,26 @@ router.get('/users/:username', (req, res, next) => {
   });
 });
 
+router.get('/login', (req, res) => {
+  res.render('login');
+});
+
+router.post('/login', passport.authenticate('login', {
+  successRedirect: '/',
+  failureRedirect: '/login',
+  failureFlash: true,
+}));
+
+router.get('/logout', (req, res) => {
+  req.logout();
+  res.redirect('/');
+});
+
+router.use((req, res, next) => {
+  res.locals.currentUser = req.user;
+  res.locals.errors = req.flash('error');
+  res.locals.infos = req.flash('info');
+  next();
+});
+
 module.exports = router;
